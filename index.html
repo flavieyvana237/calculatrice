@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--ici dans le container on a la partie qui va contenir le code de calculatrice-->
+
+    <div class="container">
+
+        <div class="calculator">
+
+            <form>
+                <div>
+                    <input type="text" readonly class="Afficheur" name="Resultat">
+                </div>
+                <div>
+                    <input type="text" readonly value="AC" onclick="Resultat.value = ''" class="operateur">
+                    <input type="text" readonly value="DE" onclick="Resultat.value = Resultat.value.toString().slice(0,-1)" class="operateur">
+                    <input type="text" readonly value="." onclick="Resultat.value += '.'" class="operateur">
+                    <input type="text" readonly value="/" onclick="Resultat.value += '/'" class="operateur">
+                </div>
+                  <div>
+                    <input type="text" readonly value="7" onclick="Resultat.value += '7'">
+                    <input type="text" readonly value="8" onclick="Resultat.value += '8'">
+                    <input type="text" readonly value="9" onclick="Resultat.value += '9'">
+                    <input type="text" readonly value="*" onclick="Resultat.value += '*'" class="operateur">
+                </div>
+                  <div>
+                    <input type="text" readonly value="4" onclick="Resultat.value += '4'">
+                    <input type="text" readonly value="5" onclick="Resultat.value += '5'">
+                    <input type="text" readonly value="6" onclick="Resultat.value += '6'">
+                    <input type="text" readonly value="-" onclick="Resultat.value += '-'" class="operateur">
+                </div>
+                  <div>
+                    <input type="text" readonly value="1" onclick="Resultat.value += '1'">
+                    <input type="text" readonly value="2" onclick="Resultat.value += '2'">
+                    <input type="text" readonly value="3" onclick="Resultat.value += '3'">
+                    <input type="text" readonly value="+" onclick="Resultat.value += '+'" class="operateur">
+                </div>
+                  <div>
+                    <input type="text" readonly value="00" onclick="Resultat.value += '00'">
+                    <input type="text" readonly value="0" onclick="Resultat.value += '0'">
+                    <input type="text" readonly value="=" onclick="Resultat.value = eval(Resultat.value)" class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
